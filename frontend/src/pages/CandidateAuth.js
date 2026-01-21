@@ -55,14 +55,18 @@ const CandidateAuth = () => {
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-osner-red rounded-none mb-4">
-            <Briefcase className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center mb-4">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_newsedujobs/artifacts/e8d397x7_Osner%20logo.png" 
+              alt="Osner-Group Logo" 
+              className="h-16 w-auto"
+            />
           </div>
           <h1 className="font-playfair text-3xl font-bold text-deep-navy mb-2">
             Espace Candidat
           </h1>
           <p className="font-inter text-slate-600">
-            Accédez à votre espace personnel et trouvez l'emploi idéal
+            Accédez à votre espace personnel Osner-Group
           </p>
         </div>
 
