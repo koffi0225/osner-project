@@ -26,6 +26,7 @@ api_router = APIRouter(prefix="/api")
 from candidate_routes import candidate_router, payment_router
 from aggregation_routes import aggregation_router
 from multi_payment_routes import multi_payment_router
+from notification_routes import notification_router
 
 # Enums
 class ArticleCategory(str, Enum):
