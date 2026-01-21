@@ -60,11 +60,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl">
             <h1 className="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-tight">
-              Votre plateforme de référence
+              Bienvenue chez Osner-Group
             </h1>
             <p className="font-inter text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-              Actualités, formations et opportunités professionnelles réunies en un seul endroit.
-              Informez-vous, formez-vous, évoluez.
+              Votre partenaire de confiance pour l'actualité, la formation professionnelle et les opportunités d'emploi en Côte d'Ivoire.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
