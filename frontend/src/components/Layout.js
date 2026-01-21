@@ -50,8 +50,8 @@ export const Layout = ({ children }) => {
                     data-testid={`nav-link-${item.label.toLowerCase().replace(/\s/g, '-')}`}
                     className={`px-4 py-2 rounded-none font-inter text-sm font-medium transition-colors ${
                       isActive(item.path)
-                        ? 'bg-electric-blue text-white'
-                        : 'text-slate-700 hover:text-electric-blue hover:bg-slate-100'
+                        ? 'bg-osner-red text-white'
+                        : 'text-slate-700 hover:text-osner-red hover:bg-slate-100'
                     }`}
                   >
                     <div className="flex items-center space-x-2">
