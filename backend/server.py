@@ -25,6 +25,7 @@ api_router = APIRouter(prefix="/api")
 # Import new routers
 from candidate_routes import candidate_router, payment_router
 from aggregation_routes import aggregation_router
+from multi_payment_routes import multi_payment_router
 
 # Enums
 class ArticleCategory(str, Enum):
