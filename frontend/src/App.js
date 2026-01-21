@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
 import { Layout } from '@/components/Layout';
+import { AuthProvider } from '@/context/AuthContext';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
 import Home from '@/pages/Home';
 import Actualite from '@/pages/Actualite';
 import ArticleDetail from '@/pages/ArticleDetail';
@@ -9,6 +11,12 @@ import FormationDetail from '@/pages/FormationDetail';
 import Emploi from '@/pages/Emploi';
 import EmploiDetail from '@/pages/EmploiDetail';
 import Admin from '@/pages/Admin';
+import CandidateAuth from '@/pages/CandidateAuth';
+import CandidateDashboard from '@/pages/CandidateDashboard';
+import CVUpload from '@/pages/CVUpload';
+import JobMatching from '@/pages/JobMatching';
+import Payment from '@/pages/Payment';
+import PaymentSuccess from '@/pages/PaymentSuccess';
 import '@/App.css';
 
 function App() {
