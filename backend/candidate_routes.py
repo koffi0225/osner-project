@@ -29,7 +29,9 @@ payment_router = APIRouter(prefix="/api/payments", tags=["payments"])
 cv_parser = CVParser()
 
 # Stripe API Key
-stripe_api_key = os.environ.get('STRIPE_API_KEY', 'sk_test_emergent')
+stripe_api_key = os.environ.get('STRIPE_API_KEY')
+if not stripe_api_key:
+    raise ValueError("STRIPE_API_KEY environment variable is required")
 
 # Payment packages
 PAYMENT_PACKAGES = {
