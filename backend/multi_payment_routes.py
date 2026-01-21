@@ -74,6 +74,14 @@ async def get_payment_methods():
                 "ussd_code": "*155#"
             },
             {
+                "id": "wave_ci",
+                "name": "Wave CI",
+                "icon": "smartphone",
+                "type": "mobile_money",
+                "available": True,
+                "app_required": True
+            },
+            {
                 "id": "tresor_money",
                 "name": "Trésor Money (Poste)",
                 "icon": "building",

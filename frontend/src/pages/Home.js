@@ -55,7 +55,16 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-deep-navy text-white overflow-hidden">
+      <section className="relative bg-deep-navy text-white overflow-hidden min-h-[600px]">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1675383094481-3e2088da943b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MjQyMTd8MHwxfHNlYXJjaHwxfHx5b3VuZyUyMHByb2Zlc3Npb25hbCUyMGFmcmljYW4lMjBidXNpbmVzc21hbiUyMHN1aXQlMjBjb25maWRlbnR8ZW58MHx8fHwxNzY5MDIyODMyfDA&ixlib=rb-4.1.0&q=85)'
+          }}
+        />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-navy/95 via-deep-navy/80 to-deep-navy/60"></div>
         <div className="absolute inset-0 grain"></div>
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-24 md:py-32 relative z-10">
           <div className="max-w-3xl">
@@ -69,7 +78,7 @@ const Home = () => {
               <Link
                 to="/actualite"
                 data-testid="hero-cta-actualite"
-                className="px-8 py-4 bg-osner-red text-white font-inter font-medium rounded-none hover:bg-blue-700 transition-colors flex items-center space-x-2"
+                className="px-8 py-4 bg-osner-red text-white font-inter font-medium rounded-none hover:bg-red-700 transition-colors flex items-center space-x-2"
               >
                 <span>Découvrir l'actualité</span>
                 <ArrowRight className="w-5 h-5" />

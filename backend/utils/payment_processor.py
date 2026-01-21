@@ -16,6 +16,7 @@ class PaymentMethod(str, Enum):
     ORANGE_MONEY = "orange_money"
     MTN_MONEY = "mtn_money"
     MOOV_MONEY = "moov_money"
+    WAVE_CI = "wave_ci"
     TRESOR_MONEY = "tresor_money"
     BANK_TRANSFER = "bank_transfer"
 
@@ -34,6 +35,7 @@ class PaymentProcessor:
             PaymentMethod.ORANGE_MONEY: MobileMoneyHandler("Orange Money"),
             PaymentMethod.MTN_MONEY: MobileMoneyHandler("MTN Money"),
             PaymentMethod.MOOV_MONEY: MobileMoneyHandler("Moov Money"),
+            PaymentMethod.WAVE_CI: WaveCIHandler(),
             PaymentMethod.TRESOR_MONEY: TresorMoneyHandler(),
             PaymentMethod.BANK_TRANSFER: BankTransferHandler(),
         }
@@ -194,6 +196,44 @@ class TresorMoneyHandler:
             "currency": currency
         }
 
+class WaveCIHandler:
+    """Gestionnaire Wave Côte d'Ivoire"""
+    
+    async def process_payment(
+        self,
+        amount: float,
+        currency: str,
+        user_data: Dict[str, Any],
+        phone_number: str = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        
+        transaction_id = f"WV-{str(uuid.uuid4())[:8]}"
+        
+        return {
+            "type": "wave",
+            "method": "wave_ci",
+            "transaction_id": transaction_id,
+            "status": PaymentStatus.PENDING,
+            "instructions": {
+                "title": "Paiement Wave CI",
+                "steps": [
+                    "Ouvrez l'application Wave sur votre téléphone",
+                    "Sélectionnez 'Envoyer de l'argent'",
+                    "Entrez le numéro: +225 07 07 592 286",
+                    f"Montant: {amount:,.0f} {currency}",
+                    f"Dans le motif, indiquez: {transaction_id}",
+                    "Confirmez le paiement avec votre code PIN"
+                ],
+                "alternative": "Ou scannez le QR code Wave disponible dans nos locaux"
+            },
+            "amount": amount,
+            "currency": currency,
+            "expires_in": 900,
+            "phone_number": phone_number
+        }
+
+
 class BankTransferHandler:
     """Gestionnaire virement bancaire"""
     
@@ -214,10 +254,10 @@ class BankTransferHandler:
             "status": PaymentStatus.PENDING,
             "bank_details": {
                 "beneficiary": "OSNER-GROUP SARL",
-                "bank": "Banque Atlantique Côte d'Ivoire",
-                "iban": "CI93 CI 01 234567890123456789 01",
-                "swift": "ATCICIX",
-                "account_number": "01234567890",
+                "bank": "Banque D'Abidjan (BDA)",
+                "iban": "CI201 01001 111803082086 75",
+                "swift": "BDABCIAB",
+                "account_number": "111803082086",
                 "reference": transaction_id,
                 "amount": f"{amount:,.0f} {currency}"
             },
@@ -225,6 +265,8 @@ class BankTransferHandler:
                 "title": "Virement Bancaire",
                 "steps": [
                     "Effectuez un virement vers notre compte bancaire",
+                    "Banque: Banque D'Abidjan (BDA)",
+                    "N° Compte: CI201 01001 111803082086 75",
                     "Utilisez OBLIGATOIREMENT la référence indiquée",
                     "Le traitement prend 24-48h ouvrées",
                     "Vous recevrez une confirmation par email"
