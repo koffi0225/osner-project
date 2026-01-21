@@ -123,6 +123,9 @@ async def register(user: UserRegister):
     if existing_user:
         raise HTTPException(status_code=400, detail="Email déjà enregistré")
     
+    # Generate code d'inscription unique
+    code_inscription = f"OSN{datetime.now(timezone.utc).strftime('%Y%m')}{str(uuid.uuid4())[:6].upper()}"
+    
     # Create new user
     hashed_password = get_password_hash(user.password)
     user_doc = {
@@ -131,7 +134,9 @@ async def register(user: UserRegister):
         "hashed_password": hashed_password,
         "nom": user.nom,
         "prenom": user.prenom,
+        "sexe": user.sexe,
         "telephone": user.telephone,
+        "code_inscription": code_inscription,
         "credits": 0,
         "created_at": datetime.now(timezone.utc).isoformat()
     }
@@ -149,6 +154,8 @@ async def register(user: UserRegister):
             "email": user_doc["email"],
             "nom": user_doc["nom"],
             "prenom": user_doc["prenom"],
+            "sexe": user_doc["sexe"],
+            "code_inscription": user_doc["code_inscription"],
             "credits": user_doc["credits"]
         }
     }
