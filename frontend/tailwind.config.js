@@ -13,6 +13,7 @@ module.exports = {
       },
       colors: {
         'deep-navy': '#0F172A',
+        'osner-red': '#DC2626',
         'electric-blue': '#2563EB',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
