@@ -19,6 +19,7 @@ const CandidateAuth = () => {
     password: '',
     nom: '',
     prenom: '',
+    sexe: 'M',
     telephone: ''
   });
 
