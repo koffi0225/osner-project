@@ -67,6 +67,8 @@ class Article(BaseModel):
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
     vedette: bool = False
+    source: Optional[str] = None
+    source_url: Optional[str] = None
 
 class ArticleCreate(BaseModel):
     titre: str
