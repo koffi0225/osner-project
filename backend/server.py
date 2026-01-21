@@ -22,6 +22,9 @@ db = client[os.environ['DB_NAME']]
 app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
+# Import new routers
+from candidate_routes import candidate_router, payment_router
+
 # Enums
 class ArticleCategory(str, Enum):
     SOCIETE = "Société"
