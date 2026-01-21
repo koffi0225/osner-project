@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from auth import get_current_user, TokenData, get_password_hash, verify_password, create_access_token
 from cv_parser import CVParser
 from emergentintegrations.payments.stripe.checkout import StripeCheckout, CheckoutSessionRequest, CheckoutSessionResponse
+from notification_routes import send_welcome_notification
 
 load_dotenv()
 
