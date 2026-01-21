@@ -16,6 +16,7 @@ import CandidateDashboard from '@/pages/CandidateDashboard';
 import CVUpload from '@/pages/CVUpload';
 import JobMatching from '@/pages/JobMatching';
 import Payment from '@/pages/Payment';
+import PaymentMulti from '@/pages/PaymentMulti';
 import PaymentSuccess from '@/pages/PaymentSuccess';
 import '@/App.css';
 
