@@ -159,14 +159,26 @@ const CandidateAuth = () => {
                     required
                   />
                 </div>
-                <div>
-                  <Label htmlFor="register-telephone">Téléphone (optionnel)</Label>
+                <div>\n                  <Label htmlFor="register-telephone">Téléphone (optionnel)</Label>
                   <Input
                     id="register-telephone"
                     data-testid="register-telephone-input"
                     value={registerForm.telephone}
                     onChange={(e) => setRegisterForm({ ...registerForm, telephone: e.target.value })}
                   />
+                </div>
+                <div>
+                  <Label htmlFor="register-sexe">Sexe</Label>
+                  <select
+                    id="register-sexe"
+                    data-testid="register-sexe-select"
+                    value={registerForm.sexe}
+                    onChange={(e) => setRegisterForm({ ...registerForm, sexe: e.target.value })}
+                    className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-osner-red"
+                  >
+                    <option value="M">Masculin</option>
+                    <option value="F">Féminin</option>
+                  </select>
                 </div>
                 <div>
                   <Label htmlFor="register-password">Mot de passe</Label>
