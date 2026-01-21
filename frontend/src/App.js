@@ -11,6 +11,8 @@ import FormationDetail from '@/pages/FormationDetail';
 import Emploi from '@/pages/Emploi';
 import EmploiDetail from '@/pages/EmploiDetail';
 import Admin from '@/pages/Admin';
+import About from '@/pages/About';
+import Contact from '@/pages/Contact';
 import CandidateAuth from '@/pages/CandidateAuth';
 import CandidateDashboard from '@/pages/CandidateDashboard';
 import CVUpload from '@/pages/CVUpload';
@@ -34,6 +36,8 @@ function App() {
             <Route path="/emploi" element={<Emploi />} />
             <Route path="/emploi/:slug" element={<EmploiDetail />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/a-propos" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
             
             {/* Candidate Routes */}
             <Route path="/candidate/auth" element={<CandidateAuth />} />
