@@ -56,7 +56,7 @@ const PaymentMulti = () => {
     }
 
     // Vérifier le numéro de téléphone pour Mobile Money
-    if (['orange_money', 'mtn_money', 'moov_money'].includes(selectedMethod) && !phoneNumber) {
+    if (['orange_money', 'mtn_money', 'moov_money', 'wave_ci'].includes(selectedMethod) && !phoneNumber) {
       toast.error('Veuillez entrer votre numéro de téléphone');
       return;
     }
