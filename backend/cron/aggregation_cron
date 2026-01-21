@@ -1,0 +1,8 @@
+# Tâche cron pour mise à jour quotidienne à 2h du matin
+# Exécute l'agrégation de contenu automatiquement
+
+# Mise à jour quotidienne complète à 2h du matin
+0 2 * * * cd /app/backend && /usr/bin/python3 scripts/daily_aggregation.py >> /var/log/aggregation.log 2>&1
+
+# Mise à jour des emplois toutes les 6 heures
+0 */6 * * * cd /app/backend && /usr/bin/python3 -c "import asyncio; import aiohttp; asyncio.run(aiohttp.ClientSession().post('http://localhost:8001/api/aggregation/update-jobs'))" >> /var/log/aggregation_jobs.log 2>&1
