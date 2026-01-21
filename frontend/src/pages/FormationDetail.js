@@ -46,7 +46,7 @@ const FormationDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-osner-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="font-inter text-slate-600">Chargement...</p>
         </div>
       </div>
@@ -58,7 +58,7 @@ const FormationDetail = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="font-inter text-slate-600 mb-4">Formation non trouvée</p>
-          <Link to="/formation" className="text-electric-blue hover:underline">
+          <Link to="/formation" className="text-osner-red hover:underline">
             Retour aux formations
           </Link>
         </div>
@@ -74,7 +74,7 @@ const FormationDetail = () => {
           <Link
             to="/formation"
             data-testid="back-to-formations"
-            className="inline-flex items-center space-x-2 text-slate-600 hover:text-electric-blue transition-colors font-inter text-sm"
+            className="inline-flex items-center space-x-2 text-slate-600 hover:text-osner-red transition-colors font-inter text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Retour aux formations</span>
@@ -91,7 +91,7 @@ const FormationDetail = () => {
               {formation.niveau}
             </span>
             <div className="flex items-center space-x-2">
-              <GraduationCap className="w-4 h-4 text-electric-blue" />
+              <GraduationCap className="w-4 h-4 text-osner-red" />
               <span className="font-mono text-xs text-slate-600">{formation.thematique}</span>
             </div>
           </div>
@@ -130,13 +130,13 @@ const FormationDetail = () => {
         <div className="bg-slate-50 py-12">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
             <div className="flex items-center space-x-3 mb-6">
-              <Target className="w-6 h-6 text-electric-blue" />
+              <Target className="w-6 h-6 text-osner-red" />
               <h2 className="font-playfair text-2xl font-bold text-deep-navy">Objectifs</h2>
             </div>
             <ul className="space-y-3">
               {formation.objectifs.map((objectif, index) => (
                 <li key={index} className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-electric-blue text-white rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 bg-osner-red text-white rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="font-mono text-xs font-bold">{index + 1}</span>
                   </div>
                   <span className="font-inter text-slate-700">{objectif}</span>
@@ -151,7 +151,7 @@ const FormationDetail = () => {
       <div className="bg-white py-12">
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           <div className="flex items-center space-x-3 mb-6">
-            <BookOpen className="w-6 h-6 text-electric-blue" />
+            <BookOpen className="w-6 h-6 text-osner-red" />
             <h2 className="font-playfair text-2xl font-bold text-deep-navy">Contenu de la formation</h2>
           </div>
           <div className="prose prose-lg max-w-none">
@@ -167,7 +167,7 @@ const FormationDetail = () => {
         <div className="bg-slate-50 py-12">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
             <div className="flex items-center space-x-3 mb-6">
-              <Download className="w-6 h-6 text-electric-blue" />
+              <Download className="w-6 h-6 text-osner-red" />
               <h2 className="font-playfair text-2xl font-bold text-deep-navy">Ressources</h2>
             </div>
             <ul className="space-y-2">

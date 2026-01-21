@@ -36,7 +36,7 @@ const CandidateDashboard = () => {
       description: 'Analysez votre CV et obtenez des suggestions d\'amélioration',
       icon: Upload,
       link: '/candidate/cv-upload',
-      color: 'bg-electric-blue'
+      color: 'bg-osner-red'
     },
     {
       title: 'Voir les correspondances',
@@ -104,12 +104,12 @@ const CandidateDashboard = () => {
                   key={index}
                   to={action.link}
                   data-testid={`quick-action-${index}`}
-                  className="group bg-white p-6 border border-slate-200 transition-all hover:shadow-lg hover:border-electric-blue"
+                  className="group bg-white p-6 border border-slate-200 transition-all hover:shadow-lg hover:border-osner-red"
                 >
                   <div className={`w-12 h-12 ${action.color} rounded-none flex items-center justify-center mb-4`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-playfair text-xl font-bold text-deep-navy mb-2 group-hover:text-electric-blue transition-colors">
+                  <h3 className="font-playfair text-xl font-bold text-deep-navy mb-2 group-hover:text-osner-red transition-colors">
                     {action.title}
                   </h3>
                   <p className="font-inter text-sm text-slate-600">

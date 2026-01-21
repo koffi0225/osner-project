@@ -130,7 +130,7 @@ export const FormationsAdmin = () => {
           if (!open) resetForm();
         }}>
           <DialogTrigger asChild>
-            <Button data-testid="add-formation-button" className="bg-electric-blue hover:bg-blue-700">
+            <Button data-testid="add-formation-button" className="bg-osner-red hover:bg-blue-700">
               <Plus className="w-4 h-4 mr-2" />
               Nouvelle formation
             </Button>
@@ -262,7 +262,7 @@ export const FormationsAdmin = () => {
                 <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>
                   Annuler
                 </Button>
-                <Button type="submit" data-testid="save-formation-button" className="bg-electric-blue hover:bg-blue-700">
+                <Button type="submit" data-testid="save-formation-button" className="bg-osner-red hover:bg-blue-700">
                   Enregistrer
                 </Button>
               </div>

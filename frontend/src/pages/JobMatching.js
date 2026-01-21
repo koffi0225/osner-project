@@ -55,7 +55,7 @@ const JobMatching = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         {loading ? (
           <div className="text-center py-16">
-            <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-16 h-16 border-4 border-osner-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="font-inter text-slate-600">Chargement...</p>
           </div>
         ) : matches.length === 0 ? (
@@ -69,7 +69,7 @@ const JobMatching = () => {
             </p>
             <Link
               to="/candidate/cv-upload"
-              className="inline-flex items-center px-6 py-3 bg-electric-blue text-white font-inter font-medium hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 bg-osner-red text-white font-inter font-medium hover:bg-blue-700 transition-colors"
             >
               Uploader mon CV
               <ChevronRight className="w-5 h-5 ml-2" />
@@ -82,11 +82,11 @@ const JobMatching = () => {
                 key={match.job_id}
                 to={`/emploi/${match.job_id}`}
                 data-testid={`match-card-${match.job_id}`}
-                className="group block bg-white border border-slate-200 p-6 transition-all hover:shadow-lg hover:border-electric-blue"
+                className="group block bg-white border border-slate-200 p-6 transition-all hover:shadow-lg hover:border-osner-red"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="font-playfair text-xl font-bold text-deep-navy mb-2 group-hover:text-electric-blue transition-colors">
+                    <h3 className="font-playfair text-xl font-bold text-deep-navy mb-2 group-hover:text-osner-red transition-colors">
                       {match.job_title}
                     </h3>
                     <div className="flex items-center space-x-2 mb-3">
@@ -109,7 +109,7 @@ const JobMatching = () => {
                   <span className="font-inter text-xs text-slate-500">
                     Compatibilité : {match.score >= 80 ? 'Excellente' : match.score >= 60 ? 'Bonne' : match.score >= 40 ? 'Moyenne' : 'Faible'}
                   </span>
-                  <ChevronRight className="w-5 h-5 text-electric-blue transition-transform group-hover:translate-x-1" />
+                  <ChevronRight className="w-5 h-5 text-osner-red transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
             ))}

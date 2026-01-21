@@ -37,7 +37,7 @@ const EmploiDetail = () => {
 
   const getTypeColor = (type) => {
     const colors = {
-      'Emploi': 'bg-electric-blue text-white',
+      'Emploi': 'bg-osner-red text-white',
       'Stage': 'bg-amber-500 text-white',
       'Concours': 'bg-emerald-500 text-white',
     };
@@ -48,7 +48,7 @@ const EmploiDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-osner-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="font-inter text-slate-600">Chargement...</p>
         </div>
       </div>
@@ -60,7 +60,7 @@ const EmploiDetail = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="font-inter text-slate-600 mb-4">Offre non trouvée</p>
-          <Link to="/emploi" className="text-electric-blue hover:underline">
+          <Link to="/emploi" className="text-osner-red hover:underline">
             Retour aux offres
           </Link>
         </div>
@@ -76,7 +76,7 @@ const EmploiDetail = () => {
           <Link
             to="/emploi"
             data-testid="back-to-jobs"
-            className="inline-flex items-center space-x-2 text-slate-600 hover:text-electric-blue transition-colors font-inter text-sm"
+            className="inline-flex items-center space-x-2 text-slate-600 hover:text-osner-red transition-colors font-inter text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Retour aux offres</span>
@@ -102,7 +102,7 @@ const EmploiDetail = () => {
           {/* Company Info */}
           <div className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-slate-200">
             <div className="flex items-center space-x-2 font-inter text-base text-slate-700">
-              <Building className="w-5 h-5 text-electric-blue" />
+              <Building className="w-5 h-5 text-osner-red" />
               <span className="font-medium">{job.entreprise}</span>
             </div>
             <div className="flex items-center space-x-2 font-inter text-sm text-slate-600">
@@ -136,7 +136,7 @@ const EmploiDetail = () => {
               <ul className="space-y-3">
                 {job.exigences.map((exigence, index) => (
                   <li key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-5 h-5 text-electric-blue flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-osner-red flex-shrink-0 mt-0.5" />
                     <span className="font-inter text-slate-700">{exigence}</span>
                   </li>
                 ))}
@@ -152,7 +152,7 @@ const EmploiDetail = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="apply-button"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-electric-blue text-white font-inter font-medium rounded-none hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-osner-red text-white font-inter font-medium rounded-none hover:bg-blue-700 transition-colors"
               >
                 <span>Postuler</span>
                 <ExternalLink className="w-5 h-5" />

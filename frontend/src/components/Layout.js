@@ -87,7 +87,7 @@ export const Layout = ({ children }) => {
             <button
               data-testid="mobile-menu-button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-slate-700 hover:text-electric-blue transition-colors"
+              className="md:hidden p-2 text-slate-700 hover:text-osner-red transition-colors"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

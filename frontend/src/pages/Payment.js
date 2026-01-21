@@ -105,11 +105,11 @@ const Payment = () => {
             <div
               key={pkg.id}
               className={`bg-white border-2 p-8 relative ${
-                pkg.popular ? 'border-electric-blue' : 'border-slate-200'
+                pkg.popular ? 'border-osner-red' : 'border-slate-200'
               }`}
             >
               {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-electric-blue text-white px-3 py-1 font-inter text-xs font-medium">
+                <div className="absolute top-0 right-0 bg-osner-red text-white px-3 py-1 font-inter text-xs font-medium">
                   POPULAIRE
                 </div>
               )}
@@ -131,7 +131,7 @@ const Payment = () => {
               <ul className="space-y-3 mb-8">
                 {pkg.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-2">
-                    <Check className="w-5 h-5 text-electric-blue flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-osner-red flex-shrink-0 mt-0.5" />
                     <span className="font-inter text-sm text-slate-600">{feature}</span>
                   </li>
                 ))}
@@ -143,7 +143,7 @@ const Payment = () => {
                 disabled={loading}
                 className={`w-full ${
                   pkg.popular
-                    ? 'bg-electric-blue hover:bg-blue-700'
+                    ? 'bg-osner-red hover:bg-blue-700'
                     : 'bg-deep-navy hover:bg-slate-800'
                 }`}
               >

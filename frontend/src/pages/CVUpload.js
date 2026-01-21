@@ -69,7 +69,7 @@ const CVUpload = () => {
         {/* Upload Section */}
         <div className="bg-white p-8 border border-slate-200 mb-8">
           <div className="text-center mb-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-electric-blue rounded-none mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-osner-red rounded-none mb-4">
               <FileText className="w-8 h-8 text-white" />
             </div>
             <h2 className="font-playfair text-2xl font-bold text-deep-navy mb-2">
@@ -105,7 +105,7 @@ const CVUpload = () => {
               onClick={handleUpload}
               data-testid="upload-cv-button"
               disabled={!file || uploading}
-              className="w-full bg-electric-blue hover:bg-blue-700"
+              className="w-full bg-osner-red hover:bg-blue-700"
             >
               {uploading ? 'Analyse en cours...' : 'Analyser mon CV'}
             </Button>
@@ -134,7 +134,7 @@ const CVUpload = () => {
                       {result.parsed_data.competences.map((comp, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-electric-blue text-white font-inter text-sm"
+                          className="px-3 py-1 bg-osner-red text-white font-inter text-sm"
                         >
                           {comp}
                         </span>

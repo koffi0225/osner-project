@@ -39,7 +39,7 @@ const ArticleDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-16 h-16 border-4 border-osner-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="font-inter text-slate-600">Chargement...</p>
         </div>
       </div>
@@ -51,7 +51,7 @@ const ArticleDetail = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <p className="font-inter text-slate-600 mb-4">Article non trouvé</p>
-          <Link to="/actualite" className="text-electric-blue hover:underline">
+          <Link to="/actualite" className="text-osner-red hover:underline">
             Retour aux articles
           </Link>
         </div>
@@ -67,7 +67,7 @@ const ArticleDetail = () => {
           <Link
             to="/actualite"
             data-testid="back-to-articles"
-            className="inline-flex items-center space-x-2 text-slate-600 hover:text-electric-blue transition-colors font-inter text-sm"
+            className="inline-flex items-center space-x-2 text-slate-600 hover:text-osner-red transition-colors font-inter text-sm"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Retour aux articles</span>
@@ -80,7 +80,7 @@ const ArticleDetail = () => {
         <div className="max-w-4xl mx-auto px-4 md:px-8">
           {/* Category */}
           <div className="mb-6">
-            <span className="px-3 py-1 bg-electric-blue text-white font-mono text-xs font-medium">
+            <span className="px-3 py-1 bg-osner-red text-white font-mono text-xs font-medium">
               {article.categorie}
             </span>
           </div>
@@ -106,7 +106,7 @@ const ArticleDetail = () => {
             </div>
             <button
               data-testid="share-button"
-              className="ml-auto flex items-center space-x-2 text-electric-blue hover:text-blue-700 transition-colors font-inter text-sm font-medium"
+              className="ml-auto flex items-center space-x-2 text-osner-red hover:text-blue-700 transition-colors font-inter text-sm font-medium"
             >
               <Share2 className="w-4 h-4" />
               <span>Partager</span>

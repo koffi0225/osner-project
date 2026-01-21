@@ -34,11 +34,11 @@ export const FormationCard = ({ formation }) => {
       {/* Content */}
       <div className="p-6">
         <div className="flex items-center space-x-2 mb-2">
-          <GraduationCap className="w-4 h-4 text-electric-blue" />
+          <GraduationCap className="w-4 h-4 text-osner-red" />
           <span className="font-mono text-xs text-slate-500">{formation.thematique}</span>
         </div>
 
-        <h3 className="font-playfair text-xl font-bold text-deep-navy mb-3 line-clamp-2 group-hover:text-electric-blue transition-colors">
+        <h3 className="font-playfair text-xl font-bold text-deep-navy mb-3 line-clamp-2 group-hover:text-osner-red transition-colors">
           {formation.titre}
         </h3>
 
@@ -53,7 +53,7 @@ export const FormationCard = ({ formation }) => {
             <span>{formation.duree}</span>
           </div>
 
-          <ArrowRight className="w-4 h-4 text-electric-blue transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="w-4 h-4 text-osner-red transition-transform group-hover:translate-x-1" />
         </div>
       </div>
     </Link>

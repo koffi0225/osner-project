@@ -131,7 +131,7 @@ export const ArticlesAdmin = () => {
           if (!open) resetForm();
         }}>
           <DialogTrigger asChild>
-            <Button data-testid="add-article-button" className="bg-electric-blue hover:bg-blue-700">
+            <Button data-testid="add-article-button" className="bg-osner-red hover:bg-blue-700">
               <Plus className="w-4 h-4 mr-2" />
               Nouvel article
             </Button>
@@ -262,7 +262,7 @@ export const ArticlesAdmin = () => {
                 <Button type="button" variant="outline" onClick={() => setDialogOpen(false)}>
                   Annuler
                 </Button>
-                <Button type="submit" data-testid="save-article-button" className="bg-electric-blue hover:bg-blue-700">
+                <Button type="submit" data-testid="save-article-button" className="bg-osner-red hover:bg-blue-700">
                   Enregistrer
                 </Button>
               </div>

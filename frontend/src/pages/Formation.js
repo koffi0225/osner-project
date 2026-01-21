@@ -65,7 +65,7 @@ const Formation = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Rechercher une formation..."
-                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-none font-inter text-sm focus:outline-none focus:border-electric-blue transition-colors"
+                className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-none font-inter text-sm focus:outline-none focus:border-osner-red transition-colors"
               />
             </div>
 
@@ -95,7 +95,7 @@ const Formation = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         {loading ? (
           <div className="text-center py-16">
-            <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <div className="w-16 h-16 border-4 border-osner-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="font-inter text-slate-600">Chargement des formations...</p>
           </div>
         ) : filteredFormations.length === 0 ? (

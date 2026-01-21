@@ -52,7 +52,7 @@ const PaymentSuccess = () => {
       <div className="max-w-md w-full">
         {status === 'checking' && (
           <div className="bg-white p-12 border border-slate-200 text-center">
-            <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+            <div className="w-16 h-16 border-4 border-osner-red border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
             <h2 className="font-playfair text-2xl font-bold text-deep-navy mb-2">
               Vérification du paiement
             </h2>
@@ -84,7 +84,7 @@ const PaymentSuccess = () => {
             </div>
 
             <div className="space-y-3">
-              <Button asChild className="w-full bg-electric-blue hover:bg-blue-700">
+              <Button asChild className="w-full bg-osner-red hover:bg-blue-700">
                 <Link to="/candidate/dashboard" data-testid="go-to-dashboard">
                   Retour au tableau de bord
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -112,7 +112,7 @@ const PaymentSuccess = () => {
                 ? 'Votre session de paiement a expiré. Veuillez réessayer.'
                 : 'Une erreur est survenue lors de la vérification du paiement. Si vous avez été débité, vos crédits seront ajoutés sous peu.'}
             </p>
-            <Button asChild className="w-full bg-electric-blue hover:bg-blue-700">
+            <Button asChild className="w-full bg-osner-red hover:bg-blue-700">
               <Link to="/candidate/payment">
                 Retour aux paiements
               </Link>

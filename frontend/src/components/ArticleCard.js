@@ -18,7 +18,7 @@ export const ArticleCard = ({ article, featured = false }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-electric-blue text-white font-mono text-xs font-medium">
+          <span className="px-3 py-1 bg-osner-red text-white font-mono text-xs font-medium">
             {article.categorie}
           </span>
         </div>
@@ -27,7 +27,7 @@ export const ArticleCard = ({ article, featured = false }) => {
       {/* Content */}
       <div className={`p-6 ${featured ? 'p-8' : ''}`}>
         <h3
-          className={`font-playfair font-bold text-deep-navy mb-3 line-clamp-2 group-hover:text-electric-blue transition-colors ${
+          className={`font-playfair font-bold text-deep-navy mb-3 line-clamp-2 group-hover:text-osner-red transition-colors ${
             featured ? 'text-2xl' : 'text-xl'
           }`}
         >
@@ -51,7 +51,7 @@ export const ArticleCard = ({ article, featured = false }) => {
             </div>
           </div>
 
-          <ArrowRight className="w-4 h-4 text-electric-blue transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="w-4 h-4 text-osner-red transition-transform group-hover:translate-x-1" />
         </div>
       </div>
     </Link>
