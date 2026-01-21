@@ -21,7 +21,7 @@ import '@/App.css';
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
         <Layout>
           <Routes>
@@ -33,11 +33,19 @@ function App() {
             <Route path="/emploi" element={<Emploi />} />
             <Route path="/emploi/:slug" element={<EmploiDetail />} />
             <Route path="/admin" element={<Admin />} />
+            
+            {/* Candidate Routes */}
+            <Route path="/candidate/auth" element={<CandidateAuth />} />
+            <Route path="/candidate/dashboard" element={<ProtectedRoute><CandidateDashboard /></ProtectedRoute>} />
+            <Route path="/candidate/cv-upload" element={<ProtectedRoute><CVUpload /></ProtectedRoute>} />
+            <Route path="/candidate/matching" element={<ProtectedRoute><JobMatching /></ProtectedRoute>} />
+            <Route path="/candidate/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
+            <Route path="/candidate/payment-success" element={<ProtectedRoute><PaymentSuccess /></ProtectedRoute>} />
           </Routes>
         </Layout>
       </BrowserRouter>
       <Toaster position="top-right" />
-    </>
+    </AuthProvider>
   );
 }
 
