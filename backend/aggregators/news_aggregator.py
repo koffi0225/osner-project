@@ -124,13 +124,17 @@ class NewsAggregator:
                     excerpt_elem = element.select_one('.td-excerpt, .entry-summary, p')
                     excerpt = self.clean_text(excerpt_elem.get_text())[:250] if excerpt_elem else title
                     
-                    # Extraire l'image
+                    # Extraire l'image avec validation
                     img_elem = element.select_one('img')
                     image_url = ""
                     if img_elem:
                         image_url = img_elem.get('src', '') or img_elem.get('data-src', '') or img_elem.get('data-lazy-src', '')
                     
-                    if not image_url or 'data:image' in image_url:
+                    # Valider l'image - exclure les placeholders
+                    invalid_patterns = ['data:image', 'blank.gif', 'placeholder', 'loading', '1x1', 'spacer', 'pixel']
+                    is_valid_image = image_url and not any(pattern in image_url.lower() for pattern in invalid_patterns)
+                    
+                    if not is_valid_image:
                         # Images par défaut par catégorie
                         category = self.extract_category(title + " " + excerpt, link)
                         default_images = {
