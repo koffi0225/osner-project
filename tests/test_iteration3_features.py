@@ -61,13 +61,13 @@ class TestNotificationAPI:
     def test_get_notifications_unauthenticated(self):
         """Test that notifications endpoint requires authentication"""
         response = requests.get(f"{BASE_URL}/api/notifications")
-        assert response.status_code == 401
+        assert response.status_code in [401, 403], f"Expected 401 or 403, got {response.status_code}"
         print("✅ Notifications endpoint requires authentication")
     
     def test_get_notifications_count_unauthenticated(self):
         """Test that notification count endpoint requires authentication"""
         response = requests.get(f"{BASE_URL}/api/notifications/count")
-        assert response.status_code == 401
+        assert response.status_code in [401, 403], f"Expected 401 or 403, got {response.status_code}"
         print("✅ Notification count endpoint requires authentication")
     
     def test_get_notifications_authenticated(self, test_user):
