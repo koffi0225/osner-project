@@ -349,6 +349,7 @@ app.include_router(api_router)
 app.include_router(candidate_router)
 app.include_router(payment_router)
 app.include_router(aggregation_router)
+app.include_router(multi_payment_router)
 
 app.add_middleware(
     CORSMiddleware,
