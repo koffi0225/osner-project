@@ -160,6 +160,24 @@ export const Layout = ({ children }) => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link
+                    to="/a-propos"
+                    data-testid="footer-link-a-propos"
+                    className="font-inter text-sm text-slate-400 hover:text-osner-red transition-colors"
+                  >
+                    À propos
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    data-testid="footer-link-contact"
+                    className="font-inter text-sm text-slate-400 hover:text-osner-red transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
 
