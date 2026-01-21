@@ -111,17 +111,20 @@ Web platform for "Osner-Group" company serving as a news media outlet, training 
 2. **Added Wave CI** - New payment method for Wave users
 3. **Updated Bank Details** - Banque D'Abidjan (BDA): CI201 01001 111803082086 75
 4. **Hero Background Image** - Professional image of young businessman
+5. **About & Contact Pages** - Pages now linked in footer navigation
+6. **Notification System** - Complete notification system for candidates with welcome notifications
 
 ## Pending Tasks
 
 ### P1 - High Priority
-- [ ] Link About and Contact pages in navigation
-- [ ] Add notification system for candidates
+- [x] ~~Link About and Contact pages in navigation~~ ✅ COMPLETED
+- [x] ~~Add notification system for candidates~~ ✅ COMPLETED
 
 ### P2 - Medium Priority
 - [ ] Payment history in candidate dashboard
 - [ ] Admin interface for Mobile Money validation
 - [ ] Fix mobile navigation bug
+- [ ] Real email sending for contact form
 
 ### P3 - Future
 - [ ] Granular user roles (Admin, Editor, Journalist)
