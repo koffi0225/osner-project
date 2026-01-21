@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import { FileText, Coins, Briefcase, TrendingUp, Upload, CreditCard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { NotificationCenter } from '@/components/NotificationCenter';
 
 const CandidateDashboard = () => {
   const { user } = useAuth();
