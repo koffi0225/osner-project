@@ -59,6 +59,26 @@ export const Layout = ({ children }) => {
                   </Link>
                 );
               })}
+              
+              {/* Candidate Space Button */}
+              {user ? (
+                <Link
+                  to="/candidate/dashboard"
+                  data-testid="candidate-dashboard-link"
+                  className="px-4 py-2 bg-deep-navy text-white rounded-none font-inter text-sm font-medium transition-colors hover:bg-slate-800 flex items-center space-x-2"
+                >
+                  <User className="w-4 h-4" />
+                  <span>Mon Espace</span>
+                </Link>
+              ) : (
+                <Link
+                  to="/candidate/auth"
+                  data-testid="candidate-auth-link"
+                  className="px-4 py-2 bg-deep-navy text-white rounded-none font-inter text-sm font-medium transition-colors hover:bg-slate-800"
+                >
+                  Espace Candidat
+                </Link>
+              )}
             </nav>
 
             {/* Mobile menu button */}
