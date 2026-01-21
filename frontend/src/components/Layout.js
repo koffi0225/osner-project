@@ -6,6 +6,7 @@ import { useAuth } from '@/context/AuthContext';
 export const Layout = ({ children }) => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user } = useAuth();
 
   const navItems = [
     { path: '/', label: 'Accueil', icon: null },
