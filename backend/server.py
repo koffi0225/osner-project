@@ -336,6 +336,12 @@ async def subscribe_newsletter(input: NewsletterCreate):
 async def root():
     return {"message": "Plateforme API - Actualité, Formation, Emploi"}
 
+# Webhook Stripe at root level
+@app.post("/api/webhook/stripe")
+async def stripe_webhook_root(request: Request):
+    from candidate_routes import stripe_webhook
+    return await stripe_webhook(request)
+
 # Include the router in the main app
 app.include_router(api_router)
 app.include_router(candidate_router)
