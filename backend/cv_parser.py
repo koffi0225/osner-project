@@ -1,6 +1,7 @@
 import PyPDF2
 import docx
 import os
+import json
 from typing import Dict, Any
 from emergentintegrations.llm.chat import LlmChat, UserMessage
 from dotenv import load_dotenv
