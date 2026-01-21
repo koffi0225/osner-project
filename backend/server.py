@@ -336,7 +336,10 @@ async def subscribe_newsletter(input: NewsletterCreate):
 async def root():
     return {"message": "Plateforme API - Actualité, Formation, Emploi"}
 
+# Include the router in the main app
 app.include_router(api_router)
+app.include_router(candidate_router)
+app.include_router(payment_router)
 
 app.add_middleware(
     CORSMiddleware,
