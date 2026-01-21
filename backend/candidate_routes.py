@@ -43,6 +43,7 @@ class UserRegister(BaseModel):
     password: str
     nom: str
     prenom: str
+    sexe: str  # "M" ou "F"
     telephone: Optional[str] = None
 
 class UserLogin(BaseModel):
@@ -55,7 +56,9 @@ class UserResponse(BaseModel):
     email: str
     nom: str
     prenom: str
+    sexe: str
     telephone: Optional[str]
+    code_inscription: str
     credits: int
     created_at: datetime
 
