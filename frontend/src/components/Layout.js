@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Newspaper, GraduationCap, Briefcase, Menu, X, Mail } from 'lucide-react';
+import { Newspaper, GraduationCap, Briefcase, Menu, X, Mail, User } from 'lucide-react';
 import { useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
 
 export const Layout = ({ children }) => {
   const location = useLocation();
