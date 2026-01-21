@@ -40,7 +40,7 @@ function App() {
             <Route path="/candidate/dashboard" element={<ProtectedRoute><CandidateDashboard /></ProtectedRoute>} />
             <Route path="/candidate/cv-upload" element={<ProtectedRoute><CVUpload /></ProtectedRoute>} />
             <Route path="/candidate/matching" element={<ProtectedRoute><JobMatching /></ProtectedRoute>} />
-            <Route path="/candidate/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
+            <Route path="/candidate/payment" element={<ProtectedRoute><PaymentMulti /></ProtectedRoute>} />
             <Route path="/candidate/payment-success" element={<ProtectedRoute><PaymentSuccess /></ProtectedRoute>} />
           </Routes>
         </Layout>
