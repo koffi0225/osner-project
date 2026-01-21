@@ -143,6 +143,11 @@ const CandidateDashboard = () => {
             </div>
           </div>
         )}
+
+        {/* Notifications */}
+        <div className="mb-12">
+          <NotificationCenter />
+        </div>
       </div>
     </div>
   );
