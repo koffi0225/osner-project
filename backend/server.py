@@ -35,6 +35,10 @@ class ArticleCategory(str, Enum):
     TECHNOLOGIE = "Technologie"
     EMPLOI = "Emploi"
     ANALYSES = "Analyses / Opinions"
+    POLITIQUE = "Politique"
+    SPORT = "Sport"
+    SANTE = "Santé"
+    CULTURE = "Culture"
 
 class FormationLevel(str, Enum):
     DEBUTANT = "Débutant"
