@@ -130,13 +130,18 @@ export const Layout = ({ children }) => {
             {/* Brand */}
             <div className="col-span-1">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-10 h-10 bg-electric-blue rounded-none flex items-center justify-center">
-                  <Newspaper className="w-6 h-6 text-white" />
-                </div>
-                <span className="font-playfair text-xl font-bold">E1 Platform</span>
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_newsedujobs/artifacts/e8d397x7_Osner%20logo.png" 
+                  alt="Osner-Group Logo" 
+                  className="h-10 w-auto"
+                />
               </div>
+              <p className="font-playfair text-xl font-bold mb-2">Osner-Group</p>
               <p className="font-inter text-sm text-slate-400 leading-relaxed">
                 Votre plateforme de référence pour l'actualité, la formation et l'emploi.
+              </p>
+              <p className="font-inter text-xs text-slate-500 mt-4">
+                Depuis le 12 mars 2019
               </p>
             </div>
 
@@ -149,7 +154,7 @@ export const Layout = ({ children }) => {
                     <Link
                       to={item.path}
                       data-testid={`footer-link-${item.label.toLowerCase().replace(/\s/g, '-')}`}
-                      className="font-inter text-sm text-slate-400 hover:text-electric-blue transition-colors"
+                      className="font-inter text-sm text-slate-400 hover:text-osner-red transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -158,29 +163,26 @@ export const Layout = ({ children }) => {
               </ul>
             </div>
 
-            {/* Resources */}
+            {/* Contact */}
             <div>
-              <h3 className="font-playfair text-lg font-bold mb-4">Ressources</h3>
+              <h3 className="font-playfair text-lg font-bold mb-4">Contact</h3>
               <ul className="space-y-2 font-inter text-sm text-slate-400">
                 <li>
-                  <a href="#" className="hover:text-electric-blue transition-colors">
-                    À propos
-                  </a>
+                  <strong className="text-white">Mobile :</strong><br/>
+                  +225 07 07 592 286<br/>
+                  +225 05 44 498 515
                 </li>
                 <li>
-                  <a href="#" className="hover:text-electric-blue transition-colors">
-                    Contact
-                  </a>
+                  <strong className="text-white">Fixe :</strong><br/>
+                  +225 27 31 960 751
                 </li>
                 <li>
-                  <a href="#" className="hover:text-electric-blue transition-colors">
-                    Mentions légales
-                  </a>
+                  <strong className="text-white">Manager :</strong><br/>
+                  Melvin Tayorault
                 </li>
                 <li>
-                  <a href="#" className="hover:text-electric-blue transition-colors">
-                    Politique de confidentialité
-                  </a>
+                  <strong className="text-white">Localisation :</strong><br/>
+                  Abidjan, Côte d'Ivoire
                 </li>
               </ul>
             </div>
@@ -203,7 +205,7 @@ export const Layout = ({ children }) => {
           {/* Bottom bar */}
           <div className="border-t border-slate-800 mt-12 pt-8">
             <p className="font-mono text-xs text-slate-400 text-center">
-              © {new Date().getFullYear()} E1 Platform. Tous droits réservés.
+              © {new Date().getFullYear()} Osner-Group. Tous droits réservés.
             </p>
           </div>
         </div>
