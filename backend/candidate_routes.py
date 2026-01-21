@@ -144,6 +144,9 @@ async def register(user: UserRegister):
     
     await db.users.insert_one(user_doc)
     
+    # Send welcome notification
+    await send_welcome_notification(user_doc["id"], user.prenom)
+    
     # Create access token
     access_token = create_access_token(data={"sub": user.email})
     
