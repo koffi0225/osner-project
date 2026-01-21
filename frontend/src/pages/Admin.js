@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Newspaper, GraduationCap, Briefcase } from 'lucide-react';
+import { Newspaper, GraduationCap, Briefcase, Database } from 'lucide-react';
 import { ArticlesAdmin } from '@/components/admin/ArticlesAdmin';
 import { FormationsAdmin } from '@/components/admin/FormationsAdmin';
 import { EmploisAdmin } from '@/components/admin/EmploisAdmin';
+import { AggregationManager } from '@/components/admin/AggregationManager';
 
 const Admin = () => {
   return (
