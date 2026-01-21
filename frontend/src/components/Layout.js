@@ -29,11 +29,13 @@ export const Layout = ({ children }) => {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-electric-blue rounded-none flex items-center justify-center">
-                <Newspaper className="w-6 h-6 text-white" />
-              </div>
+              <img 
+                src="https://customer-assets.emergentagent.com/job_newsedujobs/artifacts/e8d397x7_Osner%20logo.png" 
+                alt="Osner-Group Logo" 
+                className="h-12 w-auto"
+              />
               <span className="font-playfair text-2xl font-bold text-deep-navy tracking-tight">
-                E1 Platform
+                Osner-Group
               </span>
             </Link>
 
