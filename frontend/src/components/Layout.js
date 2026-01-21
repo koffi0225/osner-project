@@ -106,7 +106,7 @@ export const Layout = ({ children }) => {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`flex items-center space-x-3 px-4 py-3 font-inter text-sm font-medium transition-colors ${
                       isActive(item.path)
-                        ? 'bg-electric-blue text-white'
+                        ? 'bg-osner-red text-white'
                         : 'text-slate-700 hover:bg-slate-100'
                     }`}
                   >
