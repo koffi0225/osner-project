@@ -22,7 +22,7 @@ const Admin = () => {
       {/* Admin Panel */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         <Tabs defaultValue="articles" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 mb-8">
+          <TabsList className="grid w-full grid-cols-4 mb-8">
             <TabsTrigger value="articles" data-testid="tab-articles" className="flex items-center space-x-2">
               <Newspaper className="w-4 h-4" />
               <span>Articles</span>
@@ -34,6 +34,10 @@ const Admin = () => {
             <TabsTrigger value="emplois" data-testid="tab-emplois" className="flex items-center space-x-2">
               <Briefcase className="w-4 h-4" />
               <span>Emplois</span>
+            </TabsTrigger>
+            <TabsTrigger value="aggregation" data-testid="tab-aggregation" className="flex items-center space-x-2">
+              <Database className="w-4 h-4" />
+              <span>Agrégation</span>
             </TabsTrigger>
           </TabsList>
 
@@ -47,6 +51,10 @@ const Admin = () => {
 
           <TabsContent value="emplois">
             <EmploisAdmin />
+          </TabsContent>
+
+          <TabsContent value="aggregation">
+            <AggregationManager />
           </TabsContent>
         </Tabs>
       </div>
