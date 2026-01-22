@@ -1,4 +1,7 @@
-workflow_dispatch:
+# Ce code est le fichier de workflow valide
+name: Deploy project from frontend
+on:
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
